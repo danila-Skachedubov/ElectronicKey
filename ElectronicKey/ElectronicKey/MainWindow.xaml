@@ -1,0 +1,21 @@
+﻿<Window x:Class="ElectronicKey.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElectronicKey"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.545,0.556">
+        <Button Click="buttonEncrypt_Click"  Content="Button" HorizontalAlignment="Left" Margin="160,99,0,0" VerticalAlignment="Top" Width="108" Height="38"/>
+        <TextBox x:Name="textBox_p"  HorizontalAlignment="Left" Height="23" Margin="182,245,0,0" TextWrapping="Wrap" Text="101" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_q" HorizontalAlignment="Left" Height="23" Margin="194,318,0,0" TextWrapping="Wrap" Text="103" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="sourceFilePathTextBox" HorizontalAlignment="Left" Height="23" Margin="452,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="signFilePathTextBox" HorizontalAlignment="Left" Height="23" Margin="482,169,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_d"  HorizontalAlignment="Left" Height="23" Margin="352,269,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_n"  HorizontalAlignment="Left" Height="23" Margin="393,341,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Button Click="sourceFileButton_Click"  Content="Button" HorizontalAlignment="Left" Margin="572,269,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Click="signFileButton_Click" Content="Button" HorizontalAlignment="Left" Height="30" Margin="572,311,0,0" VerticalAlignment="Top" Width="142"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\bin\Debug\ElectronicKey.exe.config
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\bin\Debug\ElectronicKey.exe
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\bin\Debug\ElectronicKey.pdb
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\ElectronicKey.csproj.AssemblyReference.cache
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\MainWindow.g.cs
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\App.g.cs
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\ElectronicKey_MarkupCompile.cache
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\ElectronicKey_MarkupCompile.lref
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\MainWindow.baml
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\ElectronicKey.g.resources
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\ElectronicKey.Properties.Resources.resources
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\ElectronicKey.csproj.GenerateResource.cache
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\ElectronicKey.csproj.CoreCompileInputs.cache
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\ElectronicKey.exe
+C:\Users\Uset\Documents\GitHub\ElectronicKey\ElectronicKey\ElectronicKey\obj\Debug\ElectronicKey.pdb
