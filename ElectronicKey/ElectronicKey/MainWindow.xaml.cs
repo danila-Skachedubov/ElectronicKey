@@ -25,7 +25,8 @@ namespace ElectronicKey
     public partial class MainWindow : Window
     {
         char[] characters = new char[] { '#', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-' };
-        string sourceFilePath = " ";
+        string sourceFilePath = "";
+        string signFilePath = "";
         public MainWindow()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace ElectronicKey
 
                     List<string> result = RSA_Endoce(hash, e_, n);
 
-                    StreamWriter sw = new StreamWriter(signFilePathTextBox.Text);
+                    StreamWriter sw = new StreamWriter(signFilePath);
                     foreach (string item in result)
                         sw.WriteLine(item);
                     sw.Close();
@@ -56,7 +57,7 @@ namespace ElectronicKey
                     textBox_d.Text = d.ToString();
                     textBox_n.Text = n.ToString();
 
-                    Process.Start(signFilePathTextBox.Text);
+                    Process.Start(signFilePath);
                 }
                 else
                     MessageBox.Show("p или q - не простые числа!");
@@ -182,8 +183,51 @@ namespace ElectronicKey
 
             if (ofd.ShowDialog() == true)
             {
-                signFilePathTextBox.Text = ofd.FileName;
+                FileInfo fileInfo = new FileInfo(ofd.FileName);
+                signFilePath = ofd.FileName;
+                signFilePathTextBox.Text = fileInfo.Name;
             }
+        }
+
+        private void buttonDecipher_Click(object sender, EventArgs e)
+        {
+            if ((textBox_d.Text.Length > 0) && (textBox_n.Text.Length > 0) && (sourceFilePathTextBox.Text.Length > 0) && (signFilePathTextBox.Text.Length > 0))
+            {
+                long d = Convert.ToInt64(textBox_d.Text);
+                long n = Convert.ToInt64(textBox_n.Text);
+
+                List<string> input = new List<string>();
+
+                StreamReader sr = new StreamReader(signFilePath);
+
+                while (!sr.EndOfStream)
+                {
+                    input.Add(sr.ReadLine());
+                }
+
+                sr.Close();
+
+                string result = RSA_Dedoce(input, d, n);
+
+                string hash = File.ReadAllText(sourceFilePath).GetHashCode().ToString();
+
+                if (result.Equals(hash))
+                    MessageBox.Show("Файл подлинный. Подпись верна.");
+                else
+                    MessageBox.Show("Внимание! Файл НЕ подлинный!!!");
+            }
+            else
+                MessageBox.Show("Введите секретный ключ и пути к файлам!");
+        }
+
+        private void instruction(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Выберите файл на который требуется электронная подпись" + Environment.NewLine
+                          + "2. Выберите файл с подписью" + Environment.NewLine 
+                          + "3. Введите два взаимно простых числа" + Environment.NewLine
+                          + "4. Нажмите копку подписать" + Environment.NewLine
+                          + "5. Дя проверки подписи нажмите соответсвующую кнопку"
+                );
         }
 
     }
