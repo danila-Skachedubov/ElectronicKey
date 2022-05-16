@@ -19,9 +19,7 @@ using System.Windows.Shapes;
 
 namespace ElectronicKey
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
         char[] characters = new char[] { '#', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-' };
@@ -57,7 +55,7 @@ namespace ElectronicKey
                     textBox_d.Text = d.ToString();
                     textBox_n.Text = n.ToString();
 
-                    Process.Start(signFilePath);
+                    //Process.Start(signFilePath);
                 }
                 else
                     MessageBox.Show("p или q - не простые числа!");
@@ -80,7 +78,7 @@ namespace ElectronicKey
             return true;
         }
 
-        //зашифровать
+
         private List<string> RSA_Endoce(string s, long e, long n)
         {
             List<string> result = new List<string>();
@@ -104,7 +102,6 @@ namespace ElectronicKey
             return result;
         }
 
-        //расшифровать
         private string RSA_Dedoce(List<string> input, long d, long n)
         {
             string result = "";
@@ -128,13 +125,12 @@ namespace ElectronicKey
             return result;
         }
 
-        //вычисление параметра d. d должно быть взаимно простым с m
         private long Calculate_d(long m)
         {
             long d = m - 1;
 
             for (long i = 2; i <= m; i++)
-                if ((m % i == 0) && (d % i == 0)) //если имеют общие делители
+                if ((m % i == 0) && (d % i == 0)) 
                 {
                     d--;
                     i = 1;
@@ -143,7 +139,6 @@ namespace ElectronicKey
             return d;
         }
 
-        //вычисление параметра e
         private long Calculate_e(long d, long m)
         {
             long e = 10;
