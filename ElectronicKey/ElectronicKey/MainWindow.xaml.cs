@@ -55,7 +55,7 @@ namespace ElectronicKey
                     textBox_d.Text = d.ToString();
                     textBox_n.Text = n.ToString();
 
-                    //Process.Start(signFilePath);
+
                 }
                 else
                     MessageBox.Show("p или q - не простые числа!");
@@ -138,6 +138,7 @@ namespace ElectronicKey
 
             return d;
         }
+
 
         private long Calculate_e(long d, long m)
         {
